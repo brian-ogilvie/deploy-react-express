@@ -71,4 +71,8 @@ Push to heroku branch:
 
 `heroku run sequelize db:migrate`
 
+If necessary: 
+
+`heroku run sequelize db:seed:all`
+
 
