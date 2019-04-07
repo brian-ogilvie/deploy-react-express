@@ -14,9 +14,9 @@ const path = require('path')
 app.use('/', express.static('./build/'))
 
 // after all routes, before app.listen()
-if (process.env.NODE_ENV == "production") {
-  app.get("/*", function(request, response) {
-    response.sendFile(path.join(__dirname, "build", "index.html"));
+if (process.env.NODE_ENV === "production") {
+  app.get("/*", (req, res) => {
+    res.sendFile(path.join(__dirname, "build", "index.html"));
   });
 }
 ```
